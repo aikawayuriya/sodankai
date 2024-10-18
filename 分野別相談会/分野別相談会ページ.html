@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>業務相談会視聴ページ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">分野別業務相談会 部屋一覧</h1>
+        <p class="page-description">第2回目開催期間：10月21日(金)～11月11日(月)</p>
+        <br>
+        <div class="room-grid">
+            <div class="room-card">
+                <img src="image/koukoku.jpg" alt="広告分野" class="room-image">
+                <div class="room-info">
+                    <h2 class="room-title">広告分野</h2>
+                    <button class="join-button" onclick="joinRoom(1)">
+                        【開催中】入室する
+                    </button>
+                    <br>
+                    <div class="panelist-container">
+                        <div class="panelist-info">
+                            <img src="image/ozawa.jpg" alt="パネリスト1" class="panelist-image">
+                            <span class="panelist-name">いずみん</span>
+                        </div>
+                        <div class="panelist-info">
+                            <img src="image/kawasaki.jpg" alt="パネリスト2" class="panelist-image">
+                            <span class="panelist-name">川嵜さん</span>
+                        </div>
+                        <div class="panelist-info">
+                            <img src="image/sekiya.jpg" alt="パネリスト3" class="panelist-image">
+                            <span class="panelist-name">せっきー</span>
+                        </div>
+                        
+                        <!-- 必要に応じてパネリストを追加 -->
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="image/MA.jpg" alt="MA分野" class="room-image">
+                <div class="room-info">
+                    <h2 class="room-title">MA分野</h2>
+                    <button class="join-button" onclick="joinRoom(2)">
+                        次回開催：10月21日(月) 16:00～
+                    </button>
+                    <br>
+                    <div class="panelist-container">
+                        <div class="panelist-info">
+                            <img src="image/hirose.jpg" alt="パネリスト1" class="panelist-image">
+                            <span class="panelist-name">やっちゃん</span>
+                        </div>
+                        <div class="panelist-info">
+                            <img src="image/hirakawa.jpg" alt="パネリスト2" class="panelist-image">
+                            <span class="panelist-name">ゆいぴ</span>
+                        </div>
+                        <!-- 必要に応じてパネリストを追加 -->
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <div class="room-card">
+                <img src="image/web.jpg" alt="WEB分野" class="room-image">
+                <div class="room-info">
+                    <h2 class="room-title">WEB分野</h2>
+                    <button class="join-button" onclick="joinRoom(3)">
+                        【準備中】本日 21:00～
+                    </button>
+                    <br>
+                    <div class="panelist-container">
+                        <div class="panelist-info">
+                            <img src="image/takami.jpg" alt="パネリスト1" class="panelist-image">
+                            <span class="panelist-name">たかみん</span>
+                        </div>
+                        <div class="panelist-info">
+                            <img src="image/aizawa.jpg" alt="パネリスト2" class="panelist-image">
+                            <span class="panelist-name">さとちゃん</span>
+                        </div>
+                        <div class="panelist-info">
+                            <img src="image/kawano.jpg" alt="パネリスト3" class="panelist-image">
+                            <span class="panelist-name">なぎさ</span>
+                        </div>
+                        <!-- 必要に応じてパネリストを追加 -->
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <button class="question-button" onclick="window.open('https://cocoo.atlassian.net/wiki/x/HwBgU', '_blank')">
+            過去の質問格納庫：コンフルエンスページへ
+        </button>
+        <br>
+
+        <button class="question-button" onclick="window.open('https://docs.google.com/forms/d/1TAarFxPsIHOUPe3lMM9mJvIzArQaAySGWGj7F0gc5nc/edit', '_blank')">
+            質問はこちらから：Googleフォームへ
+        </button>
+        
+        <br>
+        <p class="page-description">＼　パネラー立候補・その他お問い合わせはPMまで！　／</p>
+        <div class="panelist-container">
+            <div class="panelist-info">
+                <img src="image/aikawa.jpg" alt="パネリスト1" class="panelist-image">
+                <span class="panelist-name">相川</span>
+            </div>
+            <div class="panelist-info">
+                <img src="image/isotani.jpg" alt="パネリスト1" class="panelist-image">
+                <span class="panelist-name">はすみん</span>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- 開催リンクを更新　開催しないものは空欄にすること -->
+    <script>
+        function joinRoom(roomNumber) {
+            const rooms = {
+                1: 'https://app.metalife.co.jp/spaces/gQQQwfaLid6vHBv3vk3t',
+                2: '',
+                3: ''
+            };
+            const url = rooms[roomNumber];
+            if (url) {
+                window.open(url, '_blank');
+            } else {
+                alert(`本日は開催していません。`);
+            }
+        }
+
+        
+
+        // ページ読み込み時に初期化
+        updateParticipantCounts();
+
+        
+    </script>
+</body>
+</html>
