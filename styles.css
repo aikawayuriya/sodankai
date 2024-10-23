@@ -178,3 +178,19 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: auto;
 }
+
+/* ビジネススキルバナー */
+.responsive-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block; /* 追加: ブロック要素として扱う */
+    margin: 0 auto; /* 追加: 左右のマージンを自動で設定して中央寄せ */
+    transition: transform 0.3s ease; /* 動きを遅く */
+}
+
+/* ビジネススキルバナーホバー */
+.responsive-image:hover {
+    transform: translateY(-5px);
+}
